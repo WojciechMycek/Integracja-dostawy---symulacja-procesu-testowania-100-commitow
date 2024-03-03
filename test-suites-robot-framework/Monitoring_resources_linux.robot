@@ -8,5 +8,17 @@ Documentation    File to define test in robot framework
 Testing_console_log
     Log To Console    Testing_console_log
 
+Testing usage of proc memory
+    pass
+
+Testing usage of disc 
+    pass
+
+Testing usage of gpu
+    pass
+
+Testing usage of cpu
+    pass
+
 *** Keywords ***
 
