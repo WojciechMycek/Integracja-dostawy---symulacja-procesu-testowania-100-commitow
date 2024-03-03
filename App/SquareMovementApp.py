@@ -14,6 +14,7 @@ class SquareMovementApp:
         self.master = master
         self.width = width
         self.height = height
+        self.score = 0  # Initial score
         
         # Create canvas for drawing objects
         self.canvas = tk.Canvas(master, width=self.width, height=self.height, bg="white")
@@ -37,11 +38,23 @@ class SquareMovementApp:
         # Create obstacle
         self.obstacle = self.canvas.create_rectangle(300, 220, 300 + self.obstacle_size, 220 + self.obstacle_size, fill="red")
         
+        # Set initial velocity
+        self.velocity = 0
+        
+        # Set gravity
+        self.gravity = 1
+        
         # Bind arrow keys to movement functions
         self.master.bind("<Left>", self.move_left)
         self.master.bind("<Right>", self.move_right)
-        self.master.bind("<Up>", self.move_up)
-        self.master.bind("<Down>", self.move_down)
+        self.master.bind("<Up>", self.jump)
+        
+        # Create label to display score
+        self.score_label = tk.Label(master, text="Score: 0")
+        self.score_label.pack()
+        
+        # Start the game loop
+        self.game_loop()
         
     def move_left(self, event):
         """Move the square to the left."""
@@ -53,15 +66,39 @@ class SquareMovementApp:
         if not self.check_collision(10, 0):
             self.canvas.move(self.square, 10, 0)
         
-    def move_up(self, event):
-        """Move the square upwards."""
-        self.canvas.move(self.square, 0, -60)
+    def jump(self, event):
+        """Jump the square upwards."""
+        self.velocity = -15
+    
+    def game_loop(self):
+        """Game loop for controlling gravity and updating square position."""
+        # Update square position
+        self.canvas.move(self.square, 0, self.velocity)
         
-    def move_down(self, event):
-        """Move the square downwards."""
+        # Update velocity with gravity
+        self.velocity += self.gravity
+        
+        # Check if square hits the ground
         square_coords = self.canvas.coords(self.square)
-        if square_coords[3] < self.ground_y:
-            self.canvas.move(self.square, 0, 10)
+        if square_coords[3] >= self.ground_y:
+            self.velocity = 0
+            self.canvas.coords(self.square, square_coords[0], self.ground_y - self.square_size,
+                               square_coords[0] + self.square_size, self.ground_y)
+        
+        # Check for collision with obstacle
+        if self.check_collision(0, self.velocity):
+            self.velocity = 0
+            square_coords = self.canvas.coords(self.square)
+            self.canvas.coords(self.square, square_coords[0], square_coords[1] - self.velocity,
+                               square_coords[2], square_coords[3] - self.velocity)
+            self.score += 1
+            self.score_label.config(text="Score: " + str(self.score))
+            self.canvas.delete(self.obstacle)
+            self.spawn_obstacle()
+            print("Score:", self.score)
+        
+        # Repeat the loop after a delay
+        self.master.after(50, self.game_loop)
     
     def check_collision(self, x_offset, y_offset):
         """Check collision between the square and the obstacle."""
@@ -75,7 +112,11 @@ class SquareMovementApp:
             square_coords_moved[1] < obstacle_coords[3] and square_coords_moved[3] > obstacle_coords[1]):
             return True
         else:
-            return False 
+            return False
+    
+    def spawn_obstacle(self):
+        """Spawn a new obstacle."""
+        self.obstacle = self.canvas.create_rectangle(600, 220, 600 + self.obstacle_size, 220 + self.obstacle_size, fill="red")
 
 root = tk.Tk()
 root.title("Square Movement")
