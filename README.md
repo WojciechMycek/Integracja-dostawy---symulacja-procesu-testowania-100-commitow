@@ -33,3 +33,11 @@ Execute robot file via CLI-terminal:
 Execute python file via CLI-terminal:
 
 ```python3 file_name.py```
+
+# Retro games for testing process
+
+# Platform-game
+
+The character can jump across platforms, then by jumping on top of enemies' heads, it will eliminate them. It will earn points for defeating enemies, as well as collect collectibles.
+
+This provides a good foundation for writing subsequent tests for this application.
