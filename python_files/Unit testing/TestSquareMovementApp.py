@@ -1,6 +1,6 @@
 import unittest
 from tkinter import Tk
-from app import SquareMovementApp
+from SquareMovementApp import SquareMovementApp
 
 class TestSquareMovementApp(unittest.TestCase):
 
