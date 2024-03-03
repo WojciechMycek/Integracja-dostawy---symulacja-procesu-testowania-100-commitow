@@ -24,8 +24,12 @@ This project aims to automate the evaluation of system stability through a combi
 - Jenkins jobs trigger tests and manage the delivery process.
 - Automated feedback is provided to developers regarding detected bugs and system performance.
 
-# File Execution
+# Instruction - file execution
 
 Execute robot file via CLI-terminal:
 
-python3 -m robot -T name_of_test.robot
+```python3 -m robot -T name_of_test.robot```
+
+Execute python file via CLI-terminal:
+
+```python3 file_name.py```
