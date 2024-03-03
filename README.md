@@ -5,7 +5,7 @@ This project aims to automate the evaluation of system stability through a combi
 
 # Planned tech-stack
 - Robot Framework
-- Pytest
+- Unittest
 - Python
 - Docker
 - Jenkins
