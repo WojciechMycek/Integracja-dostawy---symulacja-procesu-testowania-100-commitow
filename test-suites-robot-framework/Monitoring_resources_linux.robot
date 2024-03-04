@@ -7,6 +7,8 @@ Documentation    File to define test in robot framework
 *** Test Cases ***
 Testing_console_log
     Log To Console    Testing_console_log
+    Run Process       ps -a
+    Run Process       ls -lah
 
 Testing usage of proc memory
     pass
