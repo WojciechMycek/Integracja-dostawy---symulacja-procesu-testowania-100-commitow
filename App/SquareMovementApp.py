@@ -27,7 +27,7 @@ class SquareMovementApp:
         self.canvas.create_line(0, self.ground_y, self.width, self.ground_y, fill="black")
         
         # Size of the player square
-        self.square_size = 50
+        self.square_size = 30
         
         # Create player square
         self.square = self.canvas.create_rectangle(50, 200, 50 + self.square_size, 200 + self.square_size, fill="blue")
