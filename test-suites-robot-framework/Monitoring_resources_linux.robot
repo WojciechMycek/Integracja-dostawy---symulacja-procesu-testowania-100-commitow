@@ -5,6 +5,9 @@ Documentation    File to define test in robot framework
 *** Variables *** 
 
 *** Test Cases ***
+Running program
+    Run Process    python3.exe -m App.py
+
 Testing_console_log
     Log To Console    Testing_console_log
     Run Process       ps -a
