@@ -54,7 +54,7 @@ class SquareMovementApp:
         self.score_label = tk.Label(master, text="Score: 0")
         self.score_label.pack()
         
-        # Start the game loop
+        # Start the game loop ddd
         self.game_loop()
         
     def move_left(self, event):
