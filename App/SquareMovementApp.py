@@ -73,7 +73,7 @@ class SquareMovementApp:
     
     def game_loop(self):
         """Game loop for controlling gravity and updating square position."""
-        # Update square position
+        # Update square position / pipeline test
         self.canvas.move(self.square, 0, self.velocity)
         
         # Update velocity with gravity
