@@ -1,0 +1,21 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  script:
+    - echo "Building the project..."
+
+test:
+  stage: test
+  script:
+    - echo "Running tests..."
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying the project..."
+  only:
+    - master  # Deploy only when changes are pushed to the master branch
