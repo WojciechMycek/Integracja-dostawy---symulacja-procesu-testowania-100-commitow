@@ -1,26 +1,36 @@
+name: CI/CD Pipeline
+
 on:
   pull_request:
     branches:
       - master
 
-stages:
-  - build
-  - test
-  - deploy
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Build project
+        run: echo "Building the project..."
 
-build:
-  stage: build
-  script:
-    - echo "Building the project..."
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Run tests
+        run: echo "Running tests..."
 
-test:
-  stage: test
-  script:
-    - echo "Running tests..."
-
-deploy:
-  stage: deploy
-  script:
-    - echo "Deploying the project..."
-  only:
-    - master  # Deploy only when changes are pushed to the master branch
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: [build, test]
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Deploy project
+        run: echo "Deploying the project..."
