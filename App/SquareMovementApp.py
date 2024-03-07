@@ -123,5 +123,6 @@ root = tk.Tk()
 root.title("Square Movement")
 
 app = SquareMovementApp(root)
+print("Hello")
 
 root.mainloop()
