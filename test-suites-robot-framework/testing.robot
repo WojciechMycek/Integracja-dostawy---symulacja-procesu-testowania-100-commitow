@@ -6,7 +6,6 @@ Library    Process
 Test Square Movement App
     Open Application    python    square_movement_app.py
     Wait Until Keyword Succeeds    20s    1s    Check Score    10
-    #    testing pull request pipeline
     [Teardown]    Close All Applications
 
 *** Keywords ***
