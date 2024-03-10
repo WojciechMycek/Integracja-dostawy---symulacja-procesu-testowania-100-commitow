@@ -25,5 +25,8 @@ Testing usage of gpu
 Testing usage of cpu
     pass
 
+File management 
+    pass
+
 *** Keywords ***
 
