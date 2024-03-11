@@ -1,8 +1,0 @@
-run_tests:
-  image: python:3.13.0a4-bookworm
-  before_script:
-    - apt-get update && apt-get install pip
-    - pip install robotframework 
-  script:
-    - cd test-suites-robot-framework
-    - python3 -m robot -T Monitoring_resources_linux.robot
