@@ -20,7 +20,7 @@ This project aims to automate the evaluation of system stability through a combi
 - Pytest tests validate the functionality of defined functions within the application.
 
 # Automation workflow
-
+- GitHub CI / CD is used for checking potential problems before merging in on master
 - Jenkins jobs trigger tests and manage the delivery process.
 - Automated feedback is provided to developers regarding detected bugs and system performance.
 
@@ -41,7 +41,3 @@ Execute python file via CLI-terminal:
 The character can jump across platforms, then by jumping on top of enemies' heads, it will eliminate them. It will earn points for defeating enemies, as well as collect collectibles.
 
 This provides a good foundation for writing subsequent tests for this application.
-
-# Pipelines
-
-Adding pipelines to repo in Git
