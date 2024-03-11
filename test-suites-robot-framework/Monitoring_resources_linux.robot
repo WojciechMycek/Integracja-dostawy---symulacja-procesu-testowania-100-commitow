@@ -1,12 +1,13 @@
 *** Settings ***
 Documentation    File to define test in robot framework
 ...              output / input still needed to be defined
+Library    Process
 
 *** Variables *** 
 
 *** Test Cases ***
 Running program
-    Run Process    python3.exe -m App.py
+    Run Process    ls    -lah
 
 Testing_console_log
     Log To Console    Testing_console_log
