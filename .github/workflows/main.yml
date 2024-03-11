@@ -3,7 +3,7 @@ name: Pass-Only-PR
 on:
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   pass-only:
