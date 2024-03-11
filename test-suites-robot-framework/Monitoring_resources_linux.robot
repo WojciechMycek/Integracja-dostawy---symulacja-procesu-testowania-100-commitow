@@ -12,6 +12,7 @@ Running program
 Testing_console_log
     Log To Console    Testing_console_log
     Run Process    ps    -a
+    # Testing only robot file
 
 *** Comments *** 
 
