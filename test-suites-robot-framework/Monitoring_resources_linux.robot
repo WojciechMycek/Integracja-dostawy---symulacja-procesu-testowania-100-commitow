@@ -11,8 +11,9 @@ Running program
 
 Testing_console_log
     Log To Console    Testing_console_log
-    Run Process       ps -a
-    Run Process       ls -lah
+    Run Process    ps    -a
+
+*** Comments *** 
 
 Testing usage of proc memory
     pass
