@@ -11,6 +11,7 @@ This project aims to automate the evaluation of system stability through a combi
 - Jenkins
 - Linux Ubuntu
 - Bash
+- PowerShell
 - Virtual Machines Environment
 
 # Testing Plan
