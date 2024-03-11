@@ -1,8 +1,26 @@
-run_tests:
-  image: python:3.13.0a4-bookworm
-  before_script:
-    - apt-get update && apt-get install pip
-    - pip install robotframework 
-  script:
-    - cd test-suites-robot-framework
-    - python3 -m robot -T Monitoring_resources_linux.robot
+name: Automate-resource-testing
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  nazwa_joba:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.13'
+      - name: Install dependencies
+        run: |
+          apt-get update && apt-get install -y python3-pip
+          pip install robotframework
+      - name: Run tests
+        run: |
+          cd test-suites-robot-framework
+          python3 -m robot -T Monitoring_resources_linux.robot
