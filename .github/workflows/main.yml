@@ -1,14 +1,12 @@
-name: Automate-resource-testing
+name: Robot-Framework-Tests
 
 on:
-  pull_request_target:
-    branches:
-      - main
+  pull_request:
     paths:
       - '**/*.robot'
 
 jobs:
-  test-robot:
+  robot-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -17,14 +15,13 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.13.0-alpha.4'
+          python-version: '3.13.0a4'
           
       - name: Install dependencies
         run: |
           apt-get update && apt-get install -y python3-pip
           pip install robotframework
           
-      - name: Run tests
+      - name: Run Robot Framework tests
         run: |
-          cd test-suites-robot-framework
-          python3 -m robot -T Monitoring_resources_linux.robot
+          find . -name "*.robot" -exec python3 -m robot {} \;
