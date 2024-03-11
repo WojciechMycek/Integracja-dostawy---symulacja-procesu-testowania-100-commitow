@@ -7,13 +7,25 @@ on:
   pull_request:
     branches:
       - master
+
 jobs:
   test-robot:
-  run_tests:
-    image: python:3.13.0a4-bookworm
-    before_script:
-      - apt-get update && apt-get install pip
-      - pip install robotframework 
-    script:
-      - cd test-suites-robot-framework
-      - python3 -m robot -T Monitoring_resources_linux.robot
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.13.0a4'
+          
+      - name: Install dependencies
+        run: |
+          apt-get update && apt-get install -y python3-pip
+          pip install robotframework
+          
+      - name: Run tests
+        run: |
+          cd test-suites-robot-framework
+          python3 -m robot -T Monitoring_resources_linux.robot
