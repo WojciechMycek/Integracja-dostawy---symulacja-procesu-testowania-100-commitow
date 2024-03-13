@@ -1,6 +1,8 @@
 *** Settings ***
 Library    OperatingSystem
 Library    Process
+Documentation    Extending doc
+
 
 *** Test Cases ***
 Test Square Movement App
