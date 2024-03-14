@@ -3,6 +3,7 @@ Library    OperatingSystem
 Library    Process
 Documentation    Extending doc
 
+lol
 
 *** Test Cases ***
 Test Square Movement App
