@@ -42,3 +42,5 @@ Execute python file via CLI-terminal:
 The character can jump across platforms, then by jumping on top of enemies' heads, it will eliminate them. It will earn points for defeating enemies, as well as collect collectibles.
 
 This provides a good foundation for writing subsequent tests for this application.
+
+Good tests.
