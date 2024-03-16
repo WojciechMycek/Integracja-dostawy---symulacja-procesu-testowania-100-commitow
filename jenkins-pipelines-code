@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], gitTool: 'Default', submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/WojciechMycek/Integracja-dostawy---symulacja-procesu-testowania-100-commitow.git']]])
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Witam'
+            }
+        }
+    }
+}
