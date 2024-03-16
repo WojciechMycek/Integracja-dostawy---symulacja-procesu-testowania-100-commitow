@@ -1,15 +1,30 @@
 pipeline {
     agent any
+    
+    options {
+        // Opcje pipeline'u
+        timestamps() // Dodaje znaczniki czasu do konsoli
+        skipDefaultCheckout() // Pomija domyślne pobieranie kodu źródłowego
+    }
+    
     stages {
         stage('Checkout') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], gitTool: 'Default', submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/WojciechMycek/Integracja-dostawy---symulacja-procesu-testowania-100-commitow.git']]])
+                // Pobierz kod źródłowy z repozytorium GitHub
+                git branch: 'main', url: 'https://github.com/WojciechMycek/Integracja-dostawy---symulacja-procesu-testowania-100-commitow.git'
             }
         }
+        
         stage('Build') {
             steps {
-                echo 'Witam'
+                // Tutaj wykonaj swoje kroki budowania
+                echo "Buidled "
             }
         }
+        
+        // Możesz dodać więcej etapów według potrzeb
     }
+    
+    // Definicje postaci (post-actions) po zakończeniu pipeline'u
+
 }
