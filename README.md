@@ -43,4 +43,6 @@ The character can jump across platforms, then by jumping on top of enemies' head
 
 This provides a good foundation for writing subsequent tests for this application.
 
-Good tests.
+# Docker image
+
+Prepare good image that could be used to run all CI / CD environment
