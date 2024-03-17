@@ -44,5 +44,6 @@ The character can jump across platforms, then by jumping on top of enemies' head
 This provides a good foundation for writing subsequent tests for this application.
 
 # Docker image
+The next goal is to provide the user with a Docker image of Jenkins that will already be appropriately configured for smooth deployment and execution. This requires preparing suitable documentation explaining the entire CI/CD mechanism, which will then be implemented.
 
 Prepare good image that could be used to run all CI / CD environment
