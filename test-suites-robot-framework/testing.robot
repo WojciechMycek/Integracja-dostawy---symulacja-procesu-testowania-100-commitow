@@ -3,8 +3,6 @@ Library    OperatingSystem
 Library    Process
 Documentation    Extending doc
 
-lol
-
 *** Test Cases ***
 Test Square Movement App
     Open Application    python    square_movement_app.py
