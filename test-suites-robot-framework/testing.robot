@@ -18,4 +18,4 @@ Open Application
 Check Score
     [Arguments]    ${expected_score}
     ${score}=    Run Process    python    -c "import tkinter as tk; root = tk.Tk(); label = tk.Label(root, text=''); label.pack(); label['text'] = root.children['!label'].cget('text'); root.after(20000, root.destroy); root.mainloop(); print(label['text'])"
-    Should Be Equal As Numbers    ${score}    ${expected_score}
+    Should Be Equal As Numbers    ${score}    ${expected_score}    pass
