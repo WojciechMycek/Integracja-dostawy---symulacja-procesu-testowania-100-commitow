@@ -49,3 +49,5 @@ This provides a good foundation for writing subsequent tests for this applicatio
 The next goal is to provide the user with a Docker image of Jenkins that will already be appropriately configured for smooth deployment and execution. This requires preparing suitable documentation explaining the entire CI/CD mechanism, which will then be implemented.
 
 Prepare good image that could be used to run all CI / CD environment.
+
+Link to configured image is going to be provided by onedrive. Also clear instruction to run will be also attached
