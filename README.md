@@ -1,6 +1,13 @@
 # System Stability Evaluation Automation
 
+Setup plan
+
 ![image](https://github.com/WojciechMycek/Integracja-dostawy---symulacja-procesu-testowania-100-commitow/assets/66401382/9f42bd36-edc7-4880-bd35-ba8a98f603f1)
+
+Configuration and hosting needed images / files
+
+![image](https://github.com/WojciechMycek/Integracja-dostawy---symulacja-procesu-testowania-100-commitow/assets/66401382/ea69f1f7-3a4b-4d14-bd2a-764dd09d3dd6)
+To do better drawing in future xD
 
 # Description:
 This project aims to automate the evaluation of system stability through a combination of Robot Framework, Pytest, and Python scripts. The application, delivered by developers in Python, undergoes rigorous testing procedures to assess its impact on the system and validate its functionality. The automation process is orchestrated using Docker for containerization, Jenkins for job scheduling, and Linux Ubuntu as the operating system environment. Bash scripts are utilized for additional system checks, ensuring comprehensive testing coverage
