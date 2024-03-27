@@ -63,3 +63,5 @@ The next goal is to provide the user with a Docker image of Jenkins that will al
 Prepare good image that could be used to run all CI / CD environment.
 
 Link to configured image is going to be provided by onedrive. Also clear instruction to run will be also attached
+
+😝
