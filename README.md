@@ -10,8 +10,8 @@ Setup plan
 
 Configuration and hosting needed images / files
 
-![image](https://github.com/WojciechMycek/Integracja-dostawy---symulacja-procesu-testowania-100-commitow/assets/66401382/ea69f1f7-3a4b-4d14-bd2a-764dd09d3dd6)
-To do better drawing in future xD
+![image](https://github.com/WojciechMycek/Integracja-dostawy---symulacja-procesu-testowania-100-commitow/assets/66401382/4994ce87-f173-41e6-a579-c4723b8fb2cc)
+
 
 Project split: 
 
