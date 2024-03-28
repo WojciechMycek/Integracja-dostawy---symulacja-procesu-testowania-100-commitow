@@ -1,8 +1,7 @@
 System Stability Evaluation Automation
 
-![image](https://github.com/WojciechMycek/Integracja-dostawy---symulacja-procesu-testowania-100-commitow/assets/66401382/67ad3d60-cc79-4067-ae77-45c2c1ef6d1a)
+![image](https://github.com/WojciechMycek/Integracja-dostawy---symulacja-procesu-testowania-100-commitow/assets/66401382/48398613-67c9-4613-908c-598a40ba4cf4)
 
-Uncle Sam wants YOU to test software like a pro!
 
 Setup plan
 
