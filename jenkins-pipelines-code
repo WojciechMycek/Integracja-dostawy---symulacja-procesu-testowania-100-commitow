@@ -2,30 +2,28 @@ pipeline {
     agent any
     
     options {
-        // Opcje pipeline'u
-        timestamps() // Dodaje znaczniki czasu do konsoli
-        skipDefaultCheckout() // Pomija domyślne pobieranie kodu źródłowego
+        timestamps()
+        skipDefaultCheckout()
     }
     
     stages {
         stage('Checkout') {
             steps {
-                // Pobierz kod źródłowy z repozytorium GitHub
                 git branch: 'main', url: 'https://github.com/WojciechMycek/Integracja-dostawy---symulacja-procesu-testowania-100-commitow.git'
             }
         }
         
         stage('Build') {
             steps {
-                // Tutaj wykonaj swoje kroki budowania
                 echo "Buidled "
             }
         }
         
-        // Możesz dodać więcej etapów według potrzeb
+        stage('Test') {
+            steps {
+                sh 'robot <ścieżka_do_plików_testowych>'
+            }
+        }
+        
     }
-    
-    // Definicje postaci (post-actions) po zakończeniu pipeline'u
-
 }
-))))))
