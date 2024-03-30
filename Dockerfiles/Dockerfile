@@ -1,8 +1,5 @@
-FROM jenkins/jenkins
-
+FROM python
 USER root
 
 RUN apt-get update
-RUN apt-get install docker.io
 
-USER jenkins
