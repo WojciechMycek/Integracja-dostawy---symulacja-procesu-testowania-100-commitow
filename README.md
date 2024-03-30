@@ -42,7 +42,16 @@ This project aims to automate the evaluation of system stability through a combi
 - Jenkins jobs trigger tests and manage the delivery process.
 - Automated feedback is provided to developers regarding detected bugs and system performance.
 
-# Instruction - file execution
+# Docker image
+The next goal is to provide the user with a Docker image of Jenkins that will already be appropriately configured for smooth deployment and execution. This requires preparing suitable documentation explaining the entire CI/CD mechanism, which will then be implemented.
+
+Prepare good image that could be used to run all CI / CD environment.
+
+Link to configured image is going to be provided by onedrive. Also clear instruction to run will be also attached
+
+# Instruction - mounting Jenkins image from docker and starting process of testing
+
+Link to provide Jenkins image: < under construction > v. 0.1 
 
 Execute robot file via CLI-terminal:
 
@@ -52,19 +61,5 @@ Execute python file via CLI-terminal:
 
 ```python3 file_name.py```
 
-# Retro games for testing process
-
-# Platform-game
-
-The character can jump across platforms, then by jumping on top of enemies' heads, it will eliminate them. It will earn points for defeating enemies, as well as collect collectibles.
-
-This provides a good foundation for writing subsequent tests for this application.
-
-# Docker image
-The next goal is to provide the user with a Docker image of Jenkins that will already be appropriately configured for smooth deployment and execution. This requires preparing suitable documentation explaining the entire CI/CD mechanism, which will then be implemented.
-
-Prepare good image that could be used to run all CI / CD environment.
-
-Link to configured image is going to be provided by onedrive. Also clear instruction to run will be also attached
-
-😝
+# Jenkins from docker version 0.1
+< place holder to describe what's new in each version >
