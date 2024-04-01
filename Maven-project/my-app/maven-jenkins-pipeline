@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+    stages {
+    stage('maven_install') {
+        steps {
+          withMaven(globalMavenSettingsConfig: '', jdk: '', maven: '', mavenSettingsConfig: '', traceability: true) {
+    sh 'mvn clean install'
+}
+    }
+  }
+}
+}
