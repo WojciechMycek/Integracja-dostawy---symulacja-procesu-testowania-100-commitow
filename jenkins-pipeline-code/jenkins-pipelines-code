@@ -1,29 +1,12 @@
-pipeline {
+piepline {
     agent any
-    
-    options {
-        timestamps()
-        skipDefaultCheckout()
-    }
-    
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/WojciechMycek/Integracja-dostawy---symulacja-procesu-testowania-100-commitow.git'
-            }
-        }
-        
-        stage('Build') {
-            steps {
-                echo "Buidled "
-            }
-        }
-        
-        stage('Test') {
-            steps {
-                sh 'robot <ścieżka_do_plików_testowych>'
-            }
-        }
-        
+    stage('maven_install') {
+        steps {
+          withMaven(globalMavenSettingsConfig: '', jdk: '', maven: '', mavenSettingsConfig: '', traceability: true) {
+    sh mvn clean install
+}
     }
+  }
+}
 }
