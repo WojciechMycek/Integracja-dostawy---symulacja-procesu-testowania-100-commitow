@@ -60,6 +60,3 @@ Execute robot file via CLI-terminal:
 Execute python file via CLI-terminal:
 
 ```python3 file_name.py```
-
-# Jenkins from docker version 0.1
-< place holder to describe what's new in each version >
