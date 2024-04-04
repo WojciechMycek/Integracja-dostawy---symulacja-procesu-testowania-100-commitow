@@ -59,4 +59,4 @@ Execute robot file via CLI-terminal:
 
 Execute python file via CLI-terminal:
 
-```python3 file_name.py```...
+```python3 file_name.py```
