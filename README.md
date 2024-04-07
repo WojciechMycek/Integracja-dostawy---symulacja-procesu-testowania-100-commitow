@@ -55,7 +55,9 @@ Link to provide Jenkins image: < under construction > v. 0.1
 
 Execute robot file via CLI-terminal:
 
-```python3 -m robot -T name_of_test.robot```, mklm
+```python3 -m robot -T name_of_test.robot```
+
+Smieszny commit
 
 Execute python file via CLI-terminal:
 
