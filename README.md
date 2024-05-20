@@ -60,6 +60,3 @@ Smieszny commit
 Execute python file via CLI-terminal:
 
 ```python3 file_name.py```
-lololol
-lololo
-xommit 
